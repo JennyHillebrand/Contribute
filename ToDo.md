@@ -1,4 +1,4 @@
-# "Bugs"
+# "Bugs" done
 If a file is deleted after the program starts, but before the file is processed, the program crashes:
 ```
 Processing file  dripping tap v3.m2t.aix2 142477
@@ -11,14 +11,14 @@ Traceback (most recent call last):
     return os.stat(filename).st_size
 FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\Users\\g.hillebrand\\Videos\\Editted Clips\\dripping tap v3.m2t.vix'
 ```
-# Feature Requests
+# Feature Requests Ok done, not working
 - preserve the local file metadata on the pCloud copy - particularly creation and modification date
 
 
-# Security
+# Security Ok done, tested
 - don't include pswd on the public repo? (I don't mind pasting it in after download)
 
-# Info Stuff
-- print file size in MiB (with bytes in brackets - it's nice for comparisons)
+# Info Stuff, done tested
+- print file size in MiB (with bytes in brackets - it's nice for comparisons) **Ok** 
 - print out the estimated time left for the copy (Based on average upload speed so far)
-- print a copied/ already present message on upload
+- print a copied/ already present message on upload **ok**

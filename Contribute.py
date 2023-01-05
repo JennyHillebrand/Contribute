@@ -75,9 +75,9 @@ def contribute(lpath, rpath, password):
                     else:
                         print(rf["result"], "Unable to rename ",fname, " to ", fnameold)
                 if fname not in list_of_files or fsize!=dic_of_sizes[fname]: # if file not on pcloud upload
-                    create_time = os.path.getctime(curr+"\\"+fname)
-                    modify_time = os.path.getmtime(curr+"\\"+fname)
-                    uf=pc.uploadfile(files=[curr+'\\'+fname], path=ppath, nopartial="1", renameifexists="1", ctime=str(create_time), mtime=str(modify_time))
+                    create_time = str(int(os.path.getctime(curr+"\\"+fname)))
+                    modify_time = str(int(os.path.getmtime(curr+"\\"+fname)))
+                    uf=pc.uploadfile(files=[curr+'\\'+fname], path=ppath, nopartial="1", renameifexists="1", ctime=create_time, mtime=modify_time)
                     if uf["result"]!=0:
                         print(uf["result"], "File upload failed", fname)
                     print("  -- uploaded successfully.", end="")
